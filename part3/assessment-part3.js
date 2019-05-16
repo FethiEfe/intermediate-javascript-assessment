@@ -13,6 +13,12 @@
 // return the result of your updateAnimal invocation
 
 // CODE HERE...
+function callBinding(magicAnimals,updateAnimal,id){
+    animal = magicAnimals[id];
+
+   return updateAnimal.call(animal,'Trogdor' )
+    
+}
 
 
 
@@ -29,6 +35,11 @@
 
 // CODE HERE...
 
+function applyBinding(magicAnimals,updateAnimal,id){
+    animal = magicAnimals[id]
+    animal = updateAnimal.apply(animal, ['being majestic', 'eating rainbows']);
+    return magicAnimals
+};
 
 
 // *************
@@ -48,7 +59,13 @@
 var foo;
 
 // CODE HERE...
-
+// function promiseMe($q){
+//    function (){
+       
+//         setTimeout(function(){foo = "bar"},20)
+    
+//     }
+// }
 
 
 // *************
